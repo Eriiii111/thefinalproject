@@ -1,0 +1,222 @@
+h1 {
+            font-size: 50px;
+            color: white;
+            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.4);
+            }
+            100% {
+                text-shadow: 0 0 30px rgba(0, 0, 0, 0.9), 0 0 60px rgba(0, 0, 0, 0.7);
+            }
+        }
+.back-arrow {
+  display: inline-block;
+  font-size: 40px;
+  color: #FF7E5F;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  position: fixed; 
+  bottom: 30px;
+  left: 30px;  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-arrow:hover {
+  background-color: #A9A9A9;
+  color: white;
+  transform: scale(1.1);
+}
+
+body {
+  background: linear-gradient(120deg,  #F5F5DC,#A9A9A9 );
+
+    animation: backgroundShift 20s ease infinite;
+    background-size: 600% 600%;
+  }
+  @keyframes backgroundShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+
+  }
+  .a{
+    text-align: center;
+    font-size: 20px;
+  }
+  button{
+    padding: 20px;
+    margin: 20px;
+    border: 5px;
+    background-color: black;
+    color: grey;
+    font-size: 20px;
+    text-align: center;
+    float: center;
+    position: relative;
+    left: 85px;
+    top: -50px;
+      border-radius: 15px;
+    
+  }
+h3{
+    position: relative;
+    left: 45px;
+    top: -20px;
+    
+}
+.ps5{
+    
+    border: 2px solid;
+    padding: 15px;
+    width: fit-content;
+    border-radius: 19px;
+    position: relative;
+    top: 35px;
+}
+.as{
+    position: relative;
+
+}
+img{
+    height: 200px;
+    width: 350px;
+    border-radius: 10px;
+    transition: transform 0.3s ease; 
+}
+img:hover{
+  transform: scale(1.05);
+}
+.pss{
+    border: 2px solid;
+    padding: 15px;
+    width: min-content; 
+    position: relative;
+    left: 650px;
+    top: -382px;
+    border-radius: 19px;
+}
+.abc{
+    border: 2px solid;
+    padding: 15px;
+    width: fit-content; 
+    position: relative;
+    left: 1300px;
+    top: -799px;
+    border-radius: 19px;
+}
+.abd{
+  border: 2px solid;
+  padding: 15px;
+  position: relative;
+  left: 1px;
+  top: -679px;
+  width: min-content;
+  border-radius: 19px;
+  
+}
+.aba{
+  border: 2px solid;
+  padding: 15px;
+  width: min-content; 
+  position: relative;
+  left: 650px;
+  top: -1100px;
+  border-radius: 19px;
+
+}
+.ghost{
+  border: 2px solid;
+  padding: 15px;
+  width: min-content; 
+  position: relative;
+  left: 1300px;
+  top: -1520px;
+  border-radius: 19px;
+}
+.godofwar{
+  border: 2px solid;
+  padding: 15px;
+  width: min-content; 
+  position: relative;
+  left: 1px;
+  top: -1360px;
+  border-radius: 19px;
+}
+.monitor{
+  border: 2px solid;
+  padding: 15px;
+  width: min-content; 
+  position: relative;
+  left: 650px;
+  top: -1780px;
+  border-radius: 19px;
+}
+.ninetendo{
+  border: 2px solid;
+  padding: 15px;
+  width: min-content; 
+  position: relative;
+  left: 1300px;
+  top: -2200px;
+  border-radius: 19px;
+}
+
+p, h1, h2, h3, h4, h5, h6, a, span, li {
+  
+  padding: 10px;
+  background-color: transparent;
+  color: #333;
+  border: 2px solid transparent; 
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s ease-out, box-shadow 0.3s ease-out; 
+}
+
+
+p:hover, h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, a:hover, span:hover, li:hover {
+ 
+  color: white; 
+  transform: scale(1.1);  
+ 
+}
+.aaaa{
+   animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+.dual{
+    border: 2px solid;
+  padding: 15px;
+  width: min-content; 
+  position: relative;
+  left: 1px;
+  top: -2100px;
+  border-radius: 19px;
+}
+.portal1{
+      border: 2px solid;
+  padding: 15px;
+  width: min-content; 
+  position: relative;
+  left: 650px;
+  top: -2520px;
+  border-radius: 19px;
+}
+.chair{
+        border: 2px solid;
+  padding: 15px;
+  width: min-content; 
+  position: relative;
+  left: 1300px;
+  top: -2940px;
+  border-radius: 19px;
+}

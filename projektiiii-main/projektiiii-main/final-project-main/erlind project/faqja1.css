@@ -1,0 +1,66 @@
+.abc{
+   animation: fadeIn 1s ease-out;
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+.hero {
+  background-image: url('eafc.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background-attachment: fixed; 
+}
+
+.hero-content {
+  z-index: 1;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+  color: #FF5722; 
+   transition: transform 0.3s ease, text-shadow 0.3s ease; 
+}
+.hero h1:hover {
+  transform: translateY(-5px);
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7); 
+  }
+
+.hero p {
+  font-size: 1.5em;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+   transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+.hero p:hover{
+     transform: translateY(-5px);
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.7);  
+}
+
+.cta-btn {
+  background-color: #FF5722;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover {
+  background-color: #FF7043;
+  transform: scale(1.1); 
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
