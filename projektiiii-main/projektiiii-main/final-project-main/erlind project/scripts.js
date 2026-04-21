@@ -1,7 +1,6 @@
 // Shopping Cart System
 let cart = [];
 
-// Load cart from localStorage when page loads
 function loadCart() {
   const savedCart = localStorage.getItem('gameCart');
   if (savedCart) {
@@ -9,12 +8,10 @@ function loadCart() {
   }
 }
 
-// Save cart to localStorage
 function saveCart() {
   localStorage.setItem('gameCart', JSON.stringify(cart));
 }
 
-// Add product to cart
 function addToCart(productName, price) {
   const item = {
     name: productName,
@@ -24,39 +21,30 @@ function addToCart(productName, price) {
   
   cart.push(item);
   saveCart();
-  
-  // Show notification
   showNotification(productName + ' u shtua në shportë! ✓');
-  
-  // Update cart display
   updateCartDisplay();
 }
 
-// Remove product from cart
 function removeFromCart(itemId) {
   cart = cart.filter(item => item.id !== itemId);
   saveCart();
   updateCartDisplay();
 }
 
-// Calculate total
 function calculateTotal() {
   return cart.reduce((total, item) => total + item.price, 0);
 }
 
-// Show notification
 function showNotification(message) {
   const notification = document.createElement('div');
   notification.className = 'notification';
   notification.textContent = message;
   document.body.appendChild(notification);
   
-  // Animate in
   setTimeout(() => {
     notification.classList.add('show');
   }, 10);
   
-  // Remove after 3 seconds
   setTimeout(() => {
     notification.classList.remove('show');
     setTimeout(() => {
@@ -65,7 +53,6 @@ function showNotification(message) {
   }, 3000);
 }
 
-// Update cart display
 function updateCartDisplay() {
   const cartCount = document.getElementById('cart-count');
   const cartTotal = document.getElementById('cart-total');
@@ -96,7 +83,6 @@ function updateCartDisplay() {
   }
 }
 
-// Toggle cart visibility
 function toggleCart() {
   const cartModal = document.getElementById('cart-modal');
   if (cartModal) {
@@ -104,12 +90,38 @@ function toggleCart() {
   }
 }
 
-// Close cart when clicking outside
+// KËRKIMI I PRODUKTEVE
+function searchProducts() {
+  const searchInput = document.getElementById('search-input');
+  const searchValue = searchInput.value.toLowerCase();
+  const products = document.querySelectorAll('[data-product]');
+  const resultsDiv = document.getElementById('search-results');
+  let visibleCount = 0;
+  
+  products.forEach(product => {
+    const productName = product.getAttribute('data-product').toLowerCase();
+    
+    if (productName.includes(searchValue)) {
+      product.classList.remove('hidden');
+      visibleCount++;
+    } else {
+      product.classList.add('hidden');
+    }
+  });
+  
+  if (searchValue === '') {
+    resultsDiv.textContent = '';
+  } else if (visibleCount === 0) {
+    resultsDiv.textContent = '❌ Nuk u gjet asnjë produkt';
+  } else {
+    resultsDiv.textContent = `✓ U gjetën ${visibleCount} produkt(e)`;
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   loadCart();
   updateCartDisplay();
   
-  // Add click outside to close cart
   document.addEventListener('click', function(event) {
     const cartModal = document.getElementById('cart-modal');
     const cartBtn = document.getElementById('cart-btn');
