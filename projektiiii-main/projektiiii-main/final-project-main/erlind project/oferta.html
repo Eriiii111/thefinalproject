@@ -5,6 +5,23 @@
     <link rel="stylesheet" href="oferta.css">
 </head>
 <body>
+    <div class="aaaa">
+    <!-- Cart Button -->
+    <div class="cart-header">
+      <button id="cart-btn" class="cart-btn" onclick="toggleCart()">
+        🛒 Shporta (<span id="cart-count">0</span>)
+      </button>
+    </div>
+    
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+      <div class="cart-header-title">Shporta Ime</div>
+      <div id="cart-items" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">Totali: <span id="cart-total">0.00</span> £</div>
+        <button class="checkout-btn" onclick="alert('Shitja përfundoi! Faleminderit për blerjen! 🎮')">Pago Tani</button>
+      </div>
+    </div>
     <h1>OFERTAT E JAVES!</h1>
     <div class="aaaa">
     <a href="klasa.html" class="back-arrow">

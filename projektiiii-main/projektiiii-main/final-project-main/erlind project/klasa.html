@@ -9,130 +9,125 @@
 <body>
   <div class="aaaa">
     <a href="faqja1.html" class="back-arrow">
-  <span>&larr;</span> 
-</a>
-  <div class="abc">
-    <div class="navbar">
-    <h1>GameTech</h1>
-    <div class="menu">
-      <a href="klasa1.html" class="active" onclick="changePage(1)">Dyqani</a>
-      <a href="oferta.html" onclick="changePage(2)">Oferta</a>
-      <a href="lajme.html" onclick="changePage(3)">Lajmet</a>
- 
+      <span>&larr;</span> 
+    </a>
+    <div class="abc">
+      <div class="navbar">
+        <h1>GameTech</h1>
+        <div class="menu">
+          <a href="klasa1.html" class="active" onclick="changePage(1)">Dyqani</a>
+          <a href="oferta.html" onclick="changePage(2)">Oferta</a>
+          <a href="lajme.html" onclick="changePage(3)">Lajmet</a>
+        </div>
+      </div>
+
+      <script>
+        function changePage(pageNumber) {
+          const links = document.querySelectorAll('.navbar .menu a');
+          links.forEach(link => link.classList.remove('active')); 
+          links[pageNumber - 1].classList.add('active');
+        }
+      </script>
+
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Miresevini tek GameTech Shop!</h1>
+          <p>Dyqani i preferuar i cdo Gamer</p>
+        </div>
+      </section>
+
+      <p style="text-align: center;">Me poshte mund te shihni disa imazhe te produkteve kryesore qe ne ofrojme.</p>
+
+      <div class="slider-wrapper">
+        <div class="slider">
+        </div>
+      </div>
+
+      <input type="radio" name="slider" id="s1" checked>
+      <input type="radio" name="slider" id="s2">
+      <input type="radio" name="slider" id="s3">
+      <input type="radio" name="slider" id="s4">
+      <input type="radio" name="slider" id="s5">
+      <input type="radio" name="slider" id="s6">
+      <input type="radio" name="slider" id="s7">
+      <input type="radio" name="slider" id="s8">
+      <input type="radio" name="slider" id="s9">
+      <input type="radio" name="slider" id="s10">
+
+      <div class="slider">
+        <div class="slides">
+          <div class="slide"><img src="monitor.jpg" alt="1"></div>
+          <div class="slide"><img src="ninetendo.jpg" alt="2"></div>
+          <div class="slide"><img src="ps5-product-thumbnail-01-en-14sep21.jpg" alt="3"></div>
+          <div class="slide"><img src="xbox-x-feature.webp" alt="4"></div>
+          <div class="slide"><img src="s9-u05-39-detail-shot-gaming-pc-original-rwd.jpg.rendition.intel.web.480.270.jpg" alt="5"></div>
+          <div class="slide"><img src="GTA6.webp" alt="6"></div>
+          <div class="slide"><img src="eafc.jpg" alt="7"></div>
+          <div class="slide"><img src="godofwar1.jpg" alt="8"></div>
+          <div class="slide"><img src="ghost.webp" alt="9"></div>
+          <div class="slide"><img src="f7baf6d0e047d9a9ca2e7b85241b233195041daa.webp" alt="10"></div>
+        </div>
+
+        <div class="nav">
+          <label class="prev" for="s1">&#10094;</label>
+          <label class="next" for="s2">&#10095;</label>
+
+          <label class="prev" for="s1">&#10094;</label>
+          <label class="next" for="s3">&#10095;</label>
+
+          <label class="prev" for="s2">&#10094;</label>
+          <label class="next" for="s4">&#10095;</label>
+
+          <label class="prev" for="s3">&#10094;</label>
+          <label class="next" for="s5">&#10095;</label>
+
+          <label class="prev" for="s4">&#10094;</label>
+          <label class="next" for="s6">&#10095;</label>
+
+          <label class="prev" for="s5">&#10094;</label>
+          <label class="next" for="s7">&#10095;</label>
+
+          <label class="prev" for="s6">&#10094;</label>
+          <label class="next" for="s8">&#10095;</label>
+
+          <label class="prev" for="s7">&#10094;</label>
+          <label class="next" for="s9">&#10095;</label>
+
+          <label class="prev" for="s8">&#10094;</label>
+          <label class="next" for="s10">&#10095;</label>
+
+          <label class="prev" for="s9">&#10094;</label>
+          <label class="next" for="s10">&#10095;</label>
+        </div>
+      </div>
+    </div>
+
+    <h2 style="text-align: center;">Pre-Order Games</h2><br>
+
+    <div class="pre-order-container">
+      <div class="ghost2">
+        <img src="1_q7qMl5dWfWIokdgcUafz8w.png">
+        <p style="text-align: center;font-size: 20px;">Ghost of Yotei, del ne 2 tetor.</p>
+        <a href="ghost.html" class="cta-btn">Pre Order</a>
+      </div>
+
+      <div class="gta">
+        <img src="GTA6.webp">
+        <p style="font-size: 20px;text-align: center;">GTA 6, vjen ne maj te 2026.</p>
+        <a href="gta.html" class="cta-btn">Pre Order</a>
+      </div>
     </div>
   </div>
 
-  <script>
-    function changePage(pageNumber) {
-      const links = document.querySelectorAll('.navbar .menu a');
-      links.forEach(link => link.classList.remove('active')); 
-
-      links[pageNumber - 1].classList.add('active');
-    }
-  </script>
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Miresevini tek GameTech Shop!</h1>
-      <p>Dyqani i preferuar i cdo Gamer</p>
+  <section class="footer">
+    <div class="footer-content">
+      <p>&copy; Faqe e GameTech. Të gjitha të drejtat e rezervuara.</p>
+      
+      <p>Viti i Krijimit: 2026</p>
+      <p>Politika e Privatësisë | Kushtet e Përdorimit</p>
+      <p>Krijuar nga: Erlind Kazazi, Mario Komino, Noel Pino, Frenki Bihuci</p>
     </div>
   </section>
-
-  <p style="text-align: center;">Me poshte mund te shihni disa imazhe te produkteve kryesore qe ne ofrojme.</p>
-
-
-<div class="slider-wrapper">
-  <div class="slider">
-    
-  </div>
-</div>
-
-  <input type="radio" name="slider" id="s1" checked>
-  <input type="radio" name="slider" id="s2">
-  <input type="radio" name="slider" id="s3">
-  <input type="radio" name="slider" id="s4">
-  <input type="radio" name="slider" id="s5">
-  <input type="radio" name="slider" id="s6">
-  <input type="radio" name="slider" id="s7">
-  <input type="radio" name="slider" id="s8">
-  <input type="radio" name="slider" id="s9">
-  <input type="radio" name="slider" id="s10">
-
-  <div class="slider">
-    <div class="slides">
-      <div class="slide"><img src="monitor.jpg" alt="1"></div>
-      <div class="slide"><img src="ninetendo.jpg" alt="2"></div>
-      <div class="slide"><img src="ps5-product-thumbnail-01-en-14sep21.jpg" alt="3"></div>
-      <div class="slide"><img src="xbox-x-feature.webp" alt="4"></div>
-      <div class="slide"><img src="s9-u05-39-detail-shot-gaming-pc-original-rwd.jpg.rendition.intel.web.480.270.jpg" alt="5"></div>
-      <div class="slide"><img src="GTA6.webp" alt="6"></div>
-      <div class="slide"><img src="eafc.jpg" alt="7"></div>
-      <div class="slide"><img src="godofwar1.jpg" alt="8"></div>
-      <div class="slide"><img src="ghost.webp" alt="9"></div>
-      <div class="slide"><img src="f7baf6d0e047d9a9ca2e7b85241b233195041daa.webp" alt="10"></div>
-    </div>
-
- 
-    <div class="nav">
-
-      <label class="prev" for="s1">&#10094;</label>
-      <label class="next" for="s2">&#10095;</label>
-
-      <label class="prev" for="s1">&#10094;</label>
-      <label class="next" for="s3">&#10095;</label>
-
-      <label class="prev" for="s2">&#10094;</label>
-      <label class="next" for="s4">&#10095;</label>
-
-      <label class="prev" for="s3">&#10094;</label>
-      <label class="next" for="s5">&#10095;</label>
-
-      <label class="prev" for="s4">&#10094;</label>
-      <label class="next" for="s6">&#10095;</label>
-
-      <label class="prev" for="s5">&#10094;</label>
-      <label class="next" for="s7">&#10095;</label>
-
-      <label class="prev" for="s6">&#10094;</label>
-      <label class="next" for="s8">&#10095;</label>
-
-      <label class="prev" for="s7">&#10094;</label>
-      <label class="next" for="s9">&#10095;</label>
-
-      <label class="prev" for="s8">&#10094;</label>
-      <label class="next" for="s10">&#10095;</label>
-
-      <label class="prev" for="s9">&#10094;</label>
-      <label class="next" for="s10">&#10095;</label>
-    </div>
-  </div>
-  </div>
-</div>
-
-  </div>
-  <h2 style="text-align: center;">Pre-Order Games</h2><br><br><br><br>
-  <div class="ghost2">
-    <img src="1_q7qMl5dWfWIokdgcUafz8w.png">
-
-  <p style="text-align: center;font-size: 20px;">Ghost of Yotei, del ne 2 tetor.</p>
-  <a href="ghost.html" class="cta-btn">Pre Order</a><br><br><br>
-
-  </div><br><br><br>
-  <div class="gta">
-  <img src="GTA6.webp">
-  <p style="font-size: 20px;text-align: center;">GTA 6, vjen ne maj te 2026.</p>
-    
-  <a href="gta.html" class="cta-btn">Pre Order</a><br><br><br> 
-  </div>
-</div>
-<section class="footer">
-  <div class="footer-content">
-    <p>&copy; Faqe e GameTech. Të gjitha të drejtat e rezervuara.</p>
-    <p>Ndihmuar nga: Shkolla Digjitale</p>
-    <p>Viti i Krijimit: 2025</p>
-    <p>Politika e Privatësisë | Kushtet e Përdorimit</p>
-    <p>Krijuar nga: Erlind Kazazi</p>
-  </div>
-</section>
 
 </body>
 </html>
