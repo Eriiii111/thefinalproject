@@ -1,18 +1,24 @@
+Oferta · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oferta</title>
     <link rel="stylesheet" href="oferta.css">
 </head>
 <body>
     <div class="aaaa">
+ 
     <!-- Cart Button -->
     <div class="cart-header">
       <button id="cart-btn" class="cart-btn" onclick="toggleCart()">
         🛒 Shporta (<span id="cart-count">0</span>)
       </button>
     </div>
-    
+ 
     <!-- Cart Modal -->
     <div id="cart-modal" class="cart-modal">
       <div class="cart-header-title">Shporta Ime</div>
@@ -22,73 +28,87 @@
         <button class="checkout-btn" onclick="alert('Shitja përfundoi! Faleminderit për blerjen! 🎮')">Pago Tani</button>
       </div>
     </div>
+ 
     <h1>OFERTAT E JAVES!</h1>
-    <div class="aaaa">
+ 
     <a href="klasa.html" class="back-arrow">
-  <span>&larr;</span> 
-</a>
-   <div class="ps5">
-   <img src="ps5-product-thumbnail-01-en-14sep21.jpg">
-   <h3>PLAYSTATION 5 - 400 £</h3>
-   <button>Add to cart</button>
-   </div>
-   <div class="pss">
-    <img src="The-Last-of-Us-part-II-Remastered.jpg">
-    <h3> THE LAST OF US 2 - 40 $</h3>
-    <button>Add to cart</button>
+      <span>&larr;</span>
+    </a>
+ 
+    <div class="ps5" data-product="PLAYSTATION 5">
+      <img src="ps5-product-thumbnail-01-en-14sep21.jpg">
+      <h3>PLAYSTATION 5 - 400 £</h3>
+      <button onclick="addToCart('PLAYSTATION 5', 400)">Add to cart</button>
     </div>
-    <div class="abc">
-    <img src="laptop.webp">
-   <h3>LAPTOP GAMING - 700 $</h3>
-   <button>Add to cart</button>
-   </div>
-   <div class="abd">
-    <img src="tlou.avif">
-   <h3>THE LAST OF US 1 - 45 $</h3>
-   <button>Add to cart</button>
-   </div>
-   <div class="aba">
-    <img src="2k25.jpg">
-     <h3> EA SPORTS NBA 2K25 - 40 $</h3>
-   <button>Add to cart</button>
-   </div>
-   <div class="ghost">
-    <img src="rdr2.jpg">
-     <h3>RED DEAD 2 PS4 & PS5 - 30 $</h3>
-   <button>Add to cart</button>
-   </div>
-   <div class="godofwar">
-    <img src="godofwar.jpg">
-     <h3> GOW RAGNAROK - 55 £</h3>
-   <button>Add to cart</button>
-   </div>
-   <div class="monitor">
-    <img src="monitor.jpg">
-     <h3>MONITOR ASUS - 105 £</h3>
-   <button>Add to cart</button>
-   </div>
-   <div class="ninetendo">
-    <img src="head.webp">
-     <h3>GAMING HEADSETS - 65 £</h3>
-   <button>Add to cart</button>
-   </div>
-      <div class="dual">
-    <img src="ps4.webp">
-     <h3>PLAYSTATION 4 PRO - 180 £</h3>
-   <button>Add to cart</button>
-      </div>
-         <div class="portal1">
-    <img src="slim.jpg">
-     <h3>PLAYSTATION 5 SLIM - 400 £</h3>
-   <button>Add to cart</button>
-   </div>
-            <div class="chair">
-    <img src="ghost.webp">
-     <h3>GHOST OF TSUSHIMA - 45 £</h3>
-   <button>Add to cart</button>
-   </div>
-
-  </div>
-  </div>
+ 
+    <div class="pss" data-product="THE LAST OF US 2">
+      <img src="The-Last-of-Us-part-II-Remastered.jpg">
+      <h3>THE LAST OF US 2 - 40 £</h3>
+      <button onclick="addToCart('THE LAST OF US 2', 40)">Add to cart</button>
+    </div>
+ 
+    <div class="abc" data-product="LAPTOP GAMING">
+      <img src="laptop.webp">
+      <h3>LAPTOP GAMING - 700 £</h3>
+      <button onclick="addToCart('LAPTOP GAMING', 700)">Add to cart</button>
+    </div>
+ 
+    <div class="abd" data-product="THE LAST OF US 1">
+      <img src="tlou.avif">
+      <h3>THE LAST OF US 1 - 45 £</h3>
+      <button onclick="addToCart('THE LAST OF US 1', 45)">Add to cart</button>
+    </div>
+ 
+    <div class="aba" data-product="EA SPORTS NBA 2K25">
+      <img src="2k25.jpg">
+      <h3>EA SPORTS NBA 2K25 - 40 £</h3>
+      <button onclick="addToCart('EA SPORTS NBA 2K25', 40)">Add to cart</button>
+    </div>
+ 
+    <div class="ghost" data-product="RED DEAD 2">
+      <img src="rdr2.jpg">
+      <h3>RED DEAD 2 PS4 & PS5 - 30 £</h3>
+      <button onclick="addToCart('RED DEAD 2 PS4 & PS5', 30)">Add to cart</button>
+    </div>
+ 
+    <div class="godofwar" data-product="GOW RAGNAROK">
+      <img src="godofwar.jpg">
+      <h3>GOW RAGNAROK - 55 £</h3>
+      <button onclick="addToCart('GOW RAGNAROK', 55)">Add to cart</button>
+    </div>
+ 
+    <div class="monitor" data-product="MONITOR ASUS">
+      <img src="monitor.jpg">
+      <h3>MONITOR ASUS - 105 £</h3>
+      <button onclick="addToCart('MONITOR ASUS', 105)">Add to cart</button>
+    </div>
+ 
+    <div class="ninetendo" data-product="GAMING HEADSETS">
+      <img src="head.webp">
+      <h3>GAMING HEADSETS - 65 £</h3>
+      <button onclick="addToCart('GAMING HEADSETS', 65)">Add to cart</button>
+    </div>
+ 
+    <div class="dual" data-product="PLAYSTATION 4 PRO">
+      <img src="ps4.webp">
+      <h3>PLAYSTATION 4 PRO - 180 £</h3>
+      <button onclick="addToCart('PLAYSTATION 4 PRO', 180)">Add to cart</button>
+    </div>
+ 
+    <div class="portal1" data-product="PLAYSTATION 5 SLIM">
+      <img src="slim.jpg">
+      <h3>PLAYSTATION 5 SLIM - 400 £</h3>
+      <button onclick="addToCart('PLAYSTATION 5 SLIM', 400)">Add to cart</button>
+    </div>
+ 
+    <div class="chair" data-product="GHOST OF TSUSHIMA">
+      <img src="ghost.webp">
+      <h3>GHOST OF TSUSHIMA - 45 £</h3>
+      <button onclick="addToCart('GHOST OF TSUSHIMA', 45)">Add to cart</button>
+    </div>
+ 
+    </div>
+ 
+  <script src="scripts.js"></script>
 </body>
 </html>
